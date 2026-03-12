@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { MaintenanceTable } from "../components/reporteMtto/MaintenanceTable";
-import { MaintenanceHeader } from "../components/reporteMtto/MaintenanceHeader";
-import { ReportModal } from "../components/reporteMtto/ReporteModal";
-import { useMaintenanceData } from "../hooks/useMaintenanceData";
-import { DetailModal } from "../components/reporteMtto/DetailModal";
-import { MaintenanceFilters } from "../components/reporteMtto/MaintenanceFilter";
 
+import { MaintenanceHeader } from "../components/ReporteMtto/MaintenanceHeader";
+import { ReportModal } from "../components/ReporteMtto/ReporteModal";
+import { useMaintenanceData } from "../hooks/useMaintenanceData";
+import { DetailModal } from "../components/ReporteMtto/DetailModal";
+import { MaintenanceFilters } from "../components/ReporteMtto/MaintenanceFilter";
+import MaintenanceTable from "../components/ReporteMtto/MaintenanceTable";
 const Mantenimiento = () => {
 	const { reports, filters, setFilters } = useMaintenanceData();
 	const [isNewReportOpen, setIsNewReportOpen] = useState(false);

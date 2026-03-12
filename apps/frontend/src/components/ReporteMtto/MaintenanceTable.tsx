@@ -10,7 +10,7 @@ interface Props {
 	onViewMore: (id: string) => void;
 }
 
-export const MaintenanceTable = ({ data, onViewMore }: Props) => {
+const MaintenanceTable = ({ data, onViewMore }: Props) => {
 	const [currentPage, setCurrentPage] = useState(1);
 
 	const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
@@ -87,3 +87,5 @@ export const MaintenanceTable = ({ data, onViewMore }: Props) => {
 		</div>
 	);
 };
+
+export default MaintenanceTable
