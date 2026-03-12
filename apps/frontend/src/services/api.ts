@@ -11,8 +11,7 @@ export const api = {
 	// REGISTRO
 	async register(data: any): Promise<AuthResponse> {
 		const response = await fetch(
-			"http://localhost:5000/api/auth/create-account",
-			//  `${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.REGISTER}`,
+			`${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.REGISTER}`,
 			{
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -29,8 +28,7 @@ export const api = {
 	// VERIFICACION MAIL
 	async confirmAccount(data: any): Promise<AuthResponse> {
 		const response = await fetch(
-			"http://localhost:5000/api/auth/confirm-account",
-			//  `${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.CONFIRMACCOUNT}`,
+			`${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.CONFIRMACCOUNT}`,
 
 			{
 				method: "POST",
@@ -49,8 +47,7 @@ export const api = {
 	// LOGIN
 	async login(data: any): Promise<string> {
 		const response = await fetch(
-			"http://localhost:5000/api/auth/login",
-			//  `${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.LOGIN}`,
+			`${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.LOGIN}`,
 			{
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -68,8 +65,7 @@ export const api = {
 	// GET USER
 	async getUser(token: string): Promise<User> {
 		const response = await fetch(
-			"http://localhost:5000/api/auth/user",
-			// `${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.GETUSER}`,
+			`${API_ENDPOINTS.BASE}${API_ENDPOINTS.AUTH.GETUSER}`,
 			{
 				method: "GET",
 				headers: {
