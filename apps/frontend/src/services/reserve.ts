@@ -1,4 +1,6 @@
-import { API_ENDPOINTS } from "../constants/routes";
+import { API_BASE_URL } from '../constants/api';
+
+import { api } from "./api";
 
 // Ajustá este type si ya tenés uno definido en ../types
 export interface Reserve {
@@ -19,7 +21,7 @@ export interface Reserve {
 
 export const reserveApi = {
     async getReserveById(id: number | string): Promise<Reserve> {
-        const response = await fetch(`http://localhost:5000/api/reserve/get-reserve/${id}`, {
+        const response = await fetch(`${API_BASE_URL}/reserve/get-reserve/${id}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
         }
@@ -32,7 +34,7 @@ export const reserveApi = {
         //   throw new Error(result.error || "Error fetching reserve");
         // }
 
-       return data;
+        return data;
     },
 
     //   async getAllReserves(): Promise<Reserve[]> {
