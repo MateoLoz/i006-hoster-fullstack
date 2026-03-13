@@ -16,8 +16,8 @@ class Settings(BaseSettings):
     llm_model: str = "google/gemma3:4b"
     gemma_url: str = "http://localhost:11434/api/"  # Ollama
 
-    AI_DATABASE_URL: str = "postgresql+asyncpg://postgres:m4rt1np0stgr3s@localhost:5432/hoster_AI"
-    MAIN_DATABASE_URL: str = "postgresql+asyncpg://postgres:m4rt1np0stgr3s@localhost:5432/hoster"
+    AI_DATABASE_URL: str 
+    MAIN_DATABASE_URL: str
     
     # API Configuration
     api_host: str = "0.0.0.0"
